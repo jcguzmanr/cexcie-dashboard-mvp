@@ -116,3 +116,4 @@ cover/
 .lock-wscript
 package-lock.json
 yarn.lock 
+.vercel

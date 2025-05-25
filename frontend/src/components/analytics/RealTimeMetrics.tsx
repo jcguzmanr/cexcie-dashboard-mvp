@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRealTimeMetrics } from '../../hooks/useAnalytics';
-import { TrendingUpIcon, TrendingDownIcon, MinusIcon } from '@heroicons/react/24/outline';
+import { ArrowTrendingUpIcon, ArrowTrendingDownIcon, MinusIcon } from '@heroicons/react/24/outline';
 
 interface MetricCardProps {
   title: string;
@@ -13,8 +13,8 @@ interface MetricCardProps {
 const MetricCard: React.FC<MetricCardProps> = ({ title, value, change, icon, color }) => {
   const getTrendIcon = () => {
     if (!change) return <MinusIcon className="w-4 h-4 text-gray-400" />;
-    if (change > 0) return <TrendingUpIcon className="w-4 h-4 text-green-500" />;
-    return <TrendingDownIcon className="w-4 h-4 text-red-500" />;
+    if (change > 0) return <ArrowTrendingUpIcon className="w-4 h-4 text-green-500" />;
+    return <ArrowTrendingDownIcon className="w-4 h-4 text-red-500" />;
   };
 
   const getTrendColor = () => {
@@ -86,7 +86,7 @@ const RealTimeMetrics: React.FC = () => {
         title="Conversión General"
         value={`${metrics.conversion_rate}%`}
         change={metrics.trends?.conversion_trend}
-        icon={<TrendingUpIcon className="w-8 h-8" />}
+        icon={<ArrowTrendingUpIcon className="w-8 h-8" />}
         color="text-blue-600"
       />
       

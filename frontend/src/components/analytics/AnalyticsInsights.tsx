@@ -3,8 +3,8 @@ import {
   LightBulbIcon, 
   ExclamationTriangleIcon, 
   CheckCircleIcon,
-  TrendingUpIcon,
-  TrendingDownIcon
+  ArrowTrendingUpIcon,
+  ArrowTrendingDownIcon
 } from '@heroicons/react/24/outline';
 import { useChannelEffectiveness, useConversionFunnel, useOperationalKPIs } from '../../hooks/useAnalytics';
 
@@ -30,7 +30,7 @@ const InsightCard: React.FC<InsightCardProps> = ({
       case 'warning':
         return <ExclamationTriangleIcon className="w-6 h-6 text-yellow-600" />;
       case 'danger':
-        return <TrendingDownIcon className="w-6 h-6 text-red-600" />;
+        return <ArrowTrendingDownIcon className="w-6 h-6 text-red-600" />;
       default:
         return <LightBulbIcon className="w-6 h-6 text-blue-600" />;
     }
@@ -199,7 +199,7 @@ const AnalyticsInsights: React.FC = () => {
         <h4 className="text-sm font-semibold text-gray-900 mb-3">Acciones Recomendadas</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <button className="flex items-center justify-center px-4 py-2 text-sm font-medium text-blue-700 bg-blue-50 border border-blue-200 rounded-md hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <TrendingUpIcon className="w-4 h-4 mr-2" />
+            <ArrowTrendingUpIcon className="w-4 h-4 mr-2" />
             Optimizar Canales
           </button>
           <button className="flex items-center justify-center px-4 py-2 text-sm font-medium text-green-700 bg-green-50 border border-green-200 rounded-md hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-500">

@@ -11,7 +11,7 @@ import {
   Pie,
   Cell,
   Legend,
-  TreeMap
+  Treemap
 } from 'recharts';
 import { MapPin, TrendingUp, Users } from 'lucide-react';
 
