@@ -34,10 +34,11 @@ async def health_check():
     return {"status": "healthy"}
 
 # Import routers
-from routers import prospects, dashboard
-app.include_router(prospects.router, prefix=f"{settings.API_V1_STR}/prospects", tags=["prospects"])
-app.include_router(dashboard.router, prefix=f"{settings.API_V1_STR}/dashboard", tags=["dashboard"])
-# app.include_router(reports.router, prefix=f"{settings.API_V1_STR}/reports", tags=["reports"])
+from routers import prospects_legacy, dashboard_legacy, analytics, reports
+app.include_router(prospects_legacy.router, prefix=f"{settings.API_V1_STR}", tags=["prospects"])
+app.include_router(dashboard_legacy.router, prefix=f"{settings.API_V1_STR}", tags=["dashboard"])
+app.include_router(analytics.router, prefix=f"{settings.API_V1_STR}", tags=["analytics"])
+app.include_router(reports.router, prefix=f"{settings.API_V1_STR}", tags=["reports"])
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True) 
