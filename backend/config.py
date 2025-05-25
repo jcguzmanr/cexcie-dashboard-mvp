@@ -26,6 +26,9 @@ class Settings(BaseSettings):
         "http://127.0.0.1:3000",
         "http://127.0.0.1:3001",
         "http://127.0.0.1:8000",
+        "https://cexcie-dashboard-mvp.vercel.app",
+        "https://cexcie-dashboard-mt9tnprde-jcguzmanrs-projects.vercel.app",
+        "https://*.vercel.app",
     ]
     
     # Security
